@@ -423,22 +423,6 @@ class PokerComparator implements Comparator<Integer>
          final ArrayList<Card> table = new ArrayList<>();
          final ArrayList<Card> testdeck = new ArrayList<>();
 
-         /*
-          * Card test1 = new Card(6, 0, false, "player"); Card test2 = new Card(5, 0,
-          * false, "player");
-          * 
-          * //Card test3 = new Card(10, 1, false, "player"); //Card test4 = new Card(11,
-          * 0, false, "player");
-          * 
-          * Card test5 = new Card(4, 0, false, "table"); Card test6 = new Card(4, 0,
-          * false, "table"); Card test7 = new Card(3, 0, false, "table"); Card test8 =
-          * new Card(2, 0, false, "table"); Card test9 = new Card(2, 0, false, "table");
-          * 
-          * testdeck.add(test1); testdeck.add(test2); //testdeck.add(test3);
-          * //testdeck.add(test4); testdeck.add(test5); testdeck.add(test6);
-          * testdeck.add(test7); testdeck.add(test8); testdeck.add(test9);
-          */
-
          int choice = 0;
          boolean roundover = false;
          boolean playgame = true;
@@ -486,7 +470,7 @@ class PokerComparator implements Comparator<Integer>
                  }
                  if (playerchoice == 2) {
                      keepGoing = false;
-                     while (table.size() <= 5) {
+                     while (table.size() <= 4) {
                          drawrandomcard(deck, table, keepGoing);
                          System.out.println("A card has been added to the table.");
 
