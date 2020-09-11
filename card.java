@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package texasholdemhighchaos;
+package THEHC;
 
 import java.util.Comparator;
-import java.util.Objects;
 
 /**
  *
@@ -17,9 +16,7 @@ class Card implements Comparator<Card>{
     //clubs 0 diamonds 1 hearts 2 spades 3
     private int rank;
     //Ace 1,2,...Queen 12, King 13
-    private boolean drawn = false;
     private boolean checked = false;
-    private int value;
     private String owner;
     
     public Card(int rank){
@@ -145,8 +142,8 @@ public int hashCode() {
     
     public int getvalue(){
     int value = 0;
-    String[] ranks = {"Null", "Null", "2", "3", "4", "5", "6",
-               "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
+    // String[] ranks = {"Null", "Null", "2", "3", "4", "5", "6",
+    //            "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
         value = this.rank;
     
     return value;
