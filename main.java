@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package THEHC;
 
 import java.util.ArrayList;
@@ -13,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author ali9450
+ * @author Zaverot
  */
 class PokerComparator implements Comparator<Integer>
 {
@@ -123,10 +118,6 @@ class PokerComparator implements Comparator<Integer>
                  }
              }
          }
-         /*
-          * System.out.println("Cards have been sorted by suit"); for (Card card :
-          * suitssorted) { System.out.println(card.toString()); }
-          */
 
          // Flush checker
          boolean flush = false;
@@ -182,14 +173,12 @@ class PokerComparator implements Comparator<Integer>
 
                  i--;
              }
-             // System.out.println(highSFValue);
              if (highSFValue == 14) {
                  royalFlush = true;
              }
 
          }
 
-         // System.out.println();
          if (flush == false) {
              int j = 14;
              while (j > 5 && straight == false) {
@@ -204,18 +193,6 @@ class PokerComparator implements Comparator<Integer>
              }
 
          }
-         // System.out.println(highStraightValue);
-
-         // System.out.println("There is a straight: "+straight);
-         // System.out.println(highStraightValue);
-         /*
-          * for (Card card : straightarray) { System.out.print(card.toString() + ", ");
-          * 
-          * } System.out.println();
-          */
-         // straight flush checker
-
-         // System.out.println("There is a straight flush: " + straightFlush);
 
          // test for multiple cards
          int sameCards = 1;
@@ -304,26 +281,8 @@ class PokerComparator implements Comparator<Integer>
              highPairValue = largegroupRank;
          }
 
-         // System.out.println("---------------------------------");
-         // System.out.println(sameCards + " a");
-         // System.out.println(largegroupRank + " r");
-         // System.out.println(smallgroupRank + " s");
-         // System.out.println(sameCards2);
-
-         // System.out.println(sameCards2);
-         // System.out.println(smallgroupRank);
-         // System.out.println(largegroupRank);
          final int otherhighcard = 0;
          final int hccounter = 0;
-         /*
-          * for (Card card : rankssorted) {
-          * 
-          * if (card.getOwner().equalsIgnoreCase("player")) { otherhighcard =
-          * card.getvalue(); }
-          * 
-          * 
-          * }
-          */
 
          int handa = 0;
          int handb = 0;
@@ -364,19 +323,13 @@ class PokerComparator implements Comparator<Integer>
          // this part determines the next highest card, incase there is a tie
          if ((hand.get(0).getvalue() != handb) && hand.get(0).getvalue() > hand.get(1).getvalue()) {
              handc = hand.get(0).getvalue();
-             // remaining = hand.get(1).getvalue();
          }
          if ((hand.get(0).getvalue() != handb) && hand.get(0).getvalue() < hand.get(1).getvalue()
                  && (hand.get(1).getvalue() == handb)) {
              handc = hand.get(0).getvalue();
          }
-         // if((hand.get(1).getvalue() != handb) && hand.get(0).getvalue() <
-         // hand.get(1).getvalue() && (hand.get(0).getvalue() == handb)){
-         // handc = hand.get(0).getvalue();
-         // }
          else if (hand.get(0).getvalue() < hand.get(1).getvalue()) {
              handc = hand.get(1).getvalue();
-             // remaining = handP.get(0);
          }
 
          final Hand winthing = new Hand(handa, handb, handc);
@@ -523,39 +476,7 @@ class PokerComparator implements Comparator<Integer>
 
          System.out.println("Goodbye!");
 
-         // System.out.println("You have been dealt the: ");
-
-         // actual
-         /*
-          * drawrandomcard(deck, playerhand, true); drawrandomcard(deck, playerhand,
-          * true);
-          * 
-          * System.out.println(""); System.out.println("The dealer has: ");
-          * drawrandomcard(deck, dealerhand, true); drawrandomcard(deck, dealerhand,
-          * true);
-          * 
-          * 
-          * drawrandomcard(deck, table, false); drawrandomcard(deck, table, false);
-          * 
-          * //test /*drawcard(testdeck, playerhand, true); drawcard(testdeck, playerhand,
-          * true);
-          * 
-          * //drawcard(testdeck, dealerhand, true); //drawcard(testdeck, dealerhand,
-          * true);
-          * 
-          * 
-          * drawcard(testdeck, table, false); drawcard(testdeck, table, false);
-          * drawcard(testdeck, table, false); drawcard(testdeck, table, false);
-          * drawcard(testdeck, table, false);
-          */
-
-         /*
-          * showtable(deck, table);
-          * 
-          * compareHands(wincondition(playerhand, table), wincondition(dealerhand,
-          * table));
-          */
-         // System.out.println(wincondition(dealerhand, table).getType());
+        
 
      }
 
